@@ -14,10 +14,15 @@ app.engine('hbs',hbs({
 app.set('view engine','hbs');
 app.use(express.static(__dirname+'/public'));   
 
-app.get('/',(req,res)=>{
-    res.render('main/index');
-})
+const mainRouter = require('./routes/main');
+app.use('/',mainRouter);
 
-app.listen(3000,()=>{
-    console.log('The server is running');
-})
+const channelRouter = require('./routes/channels');
+app.use('/channel',channelRouter);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
+    console.log('The server is running on', PORT);
+});
+
+

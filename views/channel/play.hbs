@@ -1,0 +1,28 @@
+<main class="ui container">
+    <div class="ui grid">
+        <div class="four wide column">
+                <div class="ui pointing vertical menu" style="width:100%">
+                <a class="item">
+                    {{language}}
+                </a>
+                <div class="item">
+                    <b>{{section.title}}</b>
+                    <div class="menu" style="text-indent:5px">
+                        {{#each section.items}}
+                            <a class="item" href="/channel/play/{{../type}}/{{this.snippet.position}}/{{this.contentDetails.videoId}}">{{this.snippet.title}}</a>  
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="twelve wide column">
+            <div class="ui piled segment">
+                <h2 class="ui header center aligned" style="margin:15px 0">
+                    {{video.snippet.title}}
+                </h2>
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/{{videoId}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="ui message">{{video.snippet.description}}</div>
+            </div>
+        </div>
+    </div>
+</main>

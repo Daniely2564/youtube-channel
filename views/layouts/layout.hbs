@@ -104,14 +104,14 @@
   <div class="ui borderless main menu">
     <div class="ui container">
         <div class="item header">
-            <img src="/img/logo.png" class="ui image tiny">
+            <a href="/"><img src="/img/logo.png" class="ui image tiny"></a>
         </div>
       <a href="#" class="item">About me</a>
       <a href="#" class="item">Articles</a>
       <a href="#" class="ui floated dropdown item">
         Languages <i class="dropdown icon"></i>
         <div class="menu">
-          <div class="item">Javascript</div>
+          <div class="item" id="javascript" onclick="window.location.href='/channel/play/javascript/1/Y2BeWNJqHeQ'">Javascript</div>
           <div class="item">Java</div>
           {{!-- <div class="divider"></div> --}}
           {{!-- <div class="header">Header Item</div>
@@ -124,7 +124,7 @@
             </div>
           </div>
           <div class="item">Link Item</div> --}}
-          <div class="item">Java Swing</div>
+          <div class="item" onclick="window.location.href='/channel/play/swing/0/hJmnn8edXrQ'">Java Swing</div>
           <div class="item">Node JS</div>
         </div>
       </a>
@@ -132,14 +132,18 @@
       <div style="padding:3px;margin-top:1.5px;" class="ui right floated item">
         <div class="ui left icon input">
             <i class="search icon"></i>
-            <input/>
-            <a href="#" class="ui button teal attached">Search</a>
+            <input placeholder="Search for videos"/>
+            <a href="#" class="ui button blue attached">Search</a>
         </div>  
       </div>
     </div>
   </div>
     {{{body}}}
-  
+  <script>
+       $(function(){ 
+           $("#javascript").click(function{ alert('clicked!'); });
+        });
+  </script> 
 </body>
 
 </html>
