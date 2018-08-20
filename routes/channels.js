@@ -13,6 +13,11 @@ router.get('/playlist/:playlist',(req,res)=>{
         }
         case 'swing':{
             playlist = config.swingPlaylist;
+            break;
+        }
+        case 'node':{
+            playlist = config.nodePlaylist;
+            break;
         }
     }
     request(config.playlist(playlist,config.api_key),(err,response)=>{
@@ -40,6 +45,11 @@ router.route('/play/:lang/:pos/:id')
             }
             case 'swing':{
                 playlist = config.swingPlaylist;
+                break;
+            }
+            case 'node':{
+                playlist = config.nodePlaylist;
+                break;
             }
         }
         request(config.playlist(playlist,config.api_key),(err,response)=>{

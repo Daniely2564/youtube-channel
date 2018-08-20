@@ -5,6 +5,7 @@ module.exports = {
     },
     javascriptPlaylist : `PLHGvDasahwZNNxNruv6jnbOi4XYgczsRj`,
     swingPlaylist: `PLHGvDasahwZPXuHYGhdMhU6Csjz1CjOi9`,
+    nodePlaylist:`PLHGvDasahwZNMvek8vO-78oHTkVM23o7i`,
     mailer:{
         id:'danieltwlc@gmail.com',
         pass:'Qwelmm1!',
